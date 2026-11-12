@@ -22,10 +22,8 @@ public interface ShoppingCartKernel extends Standard<ShoppingCart> {
      *
      * @param item
      *            the name of an item.
-     * @param price
-     *            the pric of an item.
      */
-    void removeItem(String item, double price);
+    void removeItem(String item);
 
     /**
      * Returns the size of this shopping cart.
