@@ -23,7 +23,7 @@
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "c:\\Users\\frank\\OneDrive - The Ohio State University\\Desktop\\software-2-monorepo\\lib\\components.jar"
     ],
     "java.saveActions.cleanup": true,
     "java.cleanup.actions": [

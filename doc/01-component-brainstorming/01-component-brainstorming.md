@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Frank Antalocy
+- **Dot Number**: antalocy.4
+- **Due Date**: 12/9/26
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +98,18 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+My goals for my career is to work as an electrical/computer engineer and I
+would like to move out of Ohio in the future. I'm not exactly sure what type
+of job I would like to do yet. Some of my hobbies are hanging out with my friends
+and family, exercising, playing sports, and video games.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -142,8 +129,6 @@ list-like components that have different ways of manipulating the data. Think
 about different ways you might allow a client to manipulate your component.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +196,110 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Counter
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model the counting of integers.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void increment()`: adds one to `this`
+      `void decrement()`: subtracts one from `this`
+      `void setValue(int k)`: sets the value of `this` to `k`
+      `int value()`: returns the value of `this`
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void incrementBy(int k)`: adds `k` to `this`
+      `void decrementBy(int k)`: subtracts `k` from `this`
+      `void clear()`: clears `this`
+      `void multiplyBy(int k)` : multiplies `k` to `this`
+      `boolean isZero()`: returns true if `this` is 0
+      `boolean isPositive()`: returns true if `this` >= 0
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, this component would be mutable because methods like increment()
+        and decrement() would change the value of `this`
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, this component would not need any internal components because it
+        only needs to store an integer value.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - This component would not need any enums, but it could use a constant
+        variable STARTING_CONSTANT = 0.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, increment() and decrement() will be 2 very useful methods for
+        implementing the standard methods. For example, incrementBy(int k) could
+        be a for loop that calls increment() `k` times.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Music Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model the organization of songs in
+      a playlist.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addSong(String song)` : adds `song` to the end of `this`
+      `String removeSong(int index)`: removes and returns the `song` at `index`
+      from `this`
+      `String getSong(int index)` : returns the `song` at  `index` of `this`
+      `int length()`: returns the length of `this`
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void clear()`: removes all of the songs from `this`
+      `boolean isEmpty()`: returns true if `this` is empty
+      `boolean hasSong(String song)`: returns true if `this` contains `song`
+      `void moveSong(int i, int k)`: moves a song from index `i` to `k`
+      `int countSong(String song)`: Returns the number of times `song` appears
+      in `this`
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, songs can be added, moved, or rearranged.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, this can be implement using a simple Sequence of strings
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No enums or constants would be required for this implementation.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, kernel methods like addSong(String song) and removeSong(String song)
+        would help to implement the secondary methods. For example, clear could
+        be implemented by repeating removeSong(String song) until there are no
+        songs left.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Shopping Cart
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model the collection of goods in a
+      shopping cart
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addItem(String item, double price)`: adds `item` to the end of `this`
+      `void removeItem(String item)`: removes `item` from `this`
+      `int size()`: returns the number of items in `this`
+      `double getPrice(String item)`: returns the price of `item`
+      `boolean hasItem(String item)` : returns true if this contains `item`
+      `Map.Pair<String, Item> removeAny()`: removes any item in `this`
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `boolean isEmpty()`: returns true if there are no items in this
+      `void clear()`: clears all of the items out of `this`
+      `int countItem(String item)`: counts the number of times `item` appears in
+      `this`
+      `double totalPrice()`: returns the total price of `this`
+      `double getSmallest()`: returns the item with the smallest price of `this`
+      `double getLargest()`: returns the item with the largest price of `this`
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, methods like addItem(String item) and removeItem(String item) can
+        alter `this`
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, a Map.Pair would be used to store an item along with its price
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No enums or constants would be needed for this implementation.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, kernel methods like addItem(String item, double price) and removeItem(String item)
+        could be useful in creating the secondary methods. For example, clear()
+        can be implemented by doing removeItem(String item) until the shopping
+        cart is empty.
 
 ## Post-Assignment
 
@@ -280,8 +307,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -319,8 +344,6 @@ designs, so we can gauge your progress. Please keep it updated at each stage
 of development.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out

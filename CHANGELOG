@@ -1,0 +1,18 @@
+# 2026.11.09
+
+## Added
+
+    - Designed a counter component
+    - Designed a music playlist component
+    - Designed a shopping cart component
+
+## 2026.11.11
+
+### Added
+
+    -Designed a proof of concept for ShoppingCart component
+
+###
+
+    -Changed design to include a map within a map so the quantity of
+    an item canbe shown
