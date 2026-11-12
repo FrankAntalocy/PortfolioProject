@@ -1,6 +1,6 @@
 # SRC Folder
 
-This README exists, so the folder shows up in source control like git. This
+This README exists, so that the folder shows up in source control like git. This
 file is not needed and can be safely deleted.
 
 However, for completeness, this folder exists for the purpose of storing your
